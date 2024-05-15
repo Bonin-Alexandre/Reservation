@@ -34,4 +34,4 @@ $env:FLASK_APP = "server.py"
 flask run
 ```
 
-2. Pour accéder au site, se rendre sur l'adresse par défaut : [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+2. Pour accéder au site, se rendre sur l'adresse par défaut : [http://127.0.0.1:5000/](http://127.0.0.1:5000/) !
