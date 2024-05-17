@@ -1,19 +1,59 @@
-.error {
-    color: red;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
-.success {
-    color: green;
-}
-
-table,
-td {
-    border: 1px solid #333;
-    border-collapse: collapse;
-}
-
-thead,
-tfoot {
+nav {
     background-color: #333;
     color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.event-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.event-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.event-card h2 {
+    margin-top: 0;
+}
+
+.event-card p {
+    margin: 10px 0;
+}
+
+.event-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.event-card a:hover {
+    background-color: #0056b3;
 }

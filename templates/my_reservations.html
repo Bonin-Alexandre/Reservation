@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>My Reservations</h1>
+<ul>
+    {% for reservation in reservations %}
+        <li>
+            <a href="{{ url_for('event', event_id=reservation.event.id) }}">{{ reservation.event.name }}</a>
+            <p>{{ reservation.event.description }}</p>
+            <p>Price: {{ reservation.event.price }} credits</p>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

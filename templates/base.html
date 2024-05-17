@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Booking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% if user %}
+        <p>Connected! Credits: {{ user.credits }}</p>
+    {% endif %}
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        {% if user %}
+            <a href="{{ url_for('logout') }}">Logout</a>
+            <a href="{{ url_for('my_reservations') }}">My Reservations</a>
+        {% else %}
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+        {% endif %}
+        <a href="{{ url_for('create_event') }}">Create Event</a>
+    </nav>
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
